@@ -16,7 +16,7 @@ ADD . /weaver
 RUN make setup
 RUN make build
 
-FROM alpine:latest
+FROM alpine:3.15.4
 
 COPY --from=weaver_base /weaver/out/weaver-server /usr/local/bin/weaver
 
