@@ -8,7 +8,7 @@ WORKDIR /estimate
 
 RUN go build main.go
 
-FROM alpine:latest
+FROM alpine:3.17.3
 COPY --from=base /estimate/main /usr/local/bin/estimator
 ENTRYPOINT ["estimator"]
 
